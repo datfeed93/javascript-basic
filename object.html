@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Object</title>
+	<link rel="stylesheet" href="">
+	<script>
+		// function Person(name,age){
+		// 	this.name = name;
+		// 	this.age = age;
+		// 	this.showInfo = function(){
+		// 		console.log(this.name + '' + this.age);
+		// 	}
+		// }
+		// var ps1 = new Person('datfeed','25');
+		// ps1.showInfo();
+
+		function Person(){}
+		Person.prototype.name = 'datfeed';
+		Person.prototype.age = 25;
+		Person.prototype.showInfo = function(){
+			console.log(this.name + '' + this.age);
+		}
+
+		var ps1 = new Person();
+		//ps1.showInfo();
+		var obj = { "name":"John", "age":30, "city":"New York"};
+
+		var stringPerson = JSON.stringify(obj);
+		console.log(stringPerson);
+
+		var ps2 = JSON.parse(stringPerson);
+		console.log(ps2);
+
+
+		for(f in ps1){
+			console.log(f);
+		}
+
+		//
+		
+
+	</script>
+</head>
+<body>
+	<section>
+		<h2>Object in Js include property and method</h2>
+		<h3>there 3 way to contruct a object in Js</h3>
+		<ul>
+			<li>
+				1: Oject Literal
+				<code>
+					<pre>
+						var Person = {
+							'name': 'datfeed',
+							'age': 8,
+							showInfo: function(){
+								console.log($this.name + ' ' + $this.age);
+							}
+						}
+					</pre>
+				</code>
+			</li>
+			<li>
+				2: Contructor pattern
+				<code>
+					<pre>
+						function Person(name,age){
+							this.name = name;
+							this.age = age;
+							this.showInfo = function(){
+								console.log($this.name + ' ' + this.age);
+							}
+						}
+						var ps1 = new Person('datfeed',25);
+						ps1.showInfo();
+					</pre>
+				</code>
+			</li>
+			<li>
+				3: Using prototype
+				<code>
+					<pre>
+						function Person(){}
+						Person.prototype.name = 'datfeed';
+						Person.prototype.age = 25;
+						Person.prototype.showInfo = function(){
+							console.log(this.name + '' + this.age);
+						}
+
+						var ps1 = new Person();
+						ps1.showInfo();
+					</pre>
+				</code>
+			</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>
+			The for...in statement iterates over the properties of an object.
+		</h2>
+		<code>
+			<pre>
+				for(f in ps1){
+					console.log(f);
+				}
+			</pre>
+		</code>
+	</section>
+	<section>
+		<h2>Serialize và deserialize</h2>
+		<code>
+			<pre>
+				var obj = { "name":"John", "age":30, "city":"New York"};
+
+				var stringPerson = JSON.stringify(obj);
+				//lose method, only rest properties
+				console.log(stringPerson);
+
+				var ps2 = JSON.parse(stringPerson);
+				console.log(ps2);
+			</pre>
+		</code>
+	</section>
+</body>
+</html>
