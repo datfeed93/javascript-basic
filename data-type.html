@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Data Type</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<section>
+		<h2>Primitive Data</h2>
+		<ul>
+			<li>string</li>
+			<li>number</li>
+			<li>boolean</li>
+			<li>undifined</li>
+		</ul>
+		<code>
+			<ul>
+				<li>
+					typeof 'datfeed' //return string
+				</li>
+				<li>
+					typeof 3.14 //return number
+				</li>
+				<li>
+					typeof true //return boolean
+				</li>
+				<li>
+					type of x //return undefined (if x has not value)
+				</li>
+			</ul>
+		</code>
+	</section>
+	<section>
+		<h2>
+			Complex Data
+		</h2>
+		<ul>
+			<li>
+				function
+			</li>
+			<li>
+				object
+			</li>
+		</ul>
+		<code>
+			<ul>
+				<li>
+					typeof {'name':'datfeed',age:25} //return object
+				</li>
+				<li>
+					typeof ['1','2','3'] //return object (not array)
+				</li>
+				<li>
+					typeof null //return object
+				</li>
+				<li>
+					typeof myFunction(){} //return function
+				</li>
+			</ul>
+		</code>
+	</section>
+	<section>
+		<h2>Different Between undefined and null </h2>
+		<code>
+				typeof undefined // undefined <br>
+				type of null //object <br>
+			
+				null === undefined //false <br>
+				null == undefined //true
+		</code>
+	</section>
+</body>
+</html>
