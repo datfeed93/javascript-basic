@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>errow</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- <p id="demo"></p>
+	<script>
+		try {
+		    adddlert("Welcome guest!");
+		}
+		catch(err) {
+		    document.getElementById("demo").innerHTML = err.message;
+		}
+	</script> -->
+	<p>Please input a number between 5 to 10</p>
+	<input id="demo" type="text">
+	<button type="button" onclick="myCheck();">Check number</button>
+	<p id="msg"></p>
+
+	<script>
+		function myCheck(argument) {
+			var x = document.getElementById('demo').value;
+			var y = 1;
+			try{
+				y = 1/0;
+				console.log(y);
+				// if(x == "") throw "empty";
+				// if(isNaN(x)) throw "not a number";
+				// x = Number(x);
+				// if(x < 5) throw "too low";
+				// if(x>10) throw "tow high";
+			}catch(err){
+				document.getElementById('msg').innerHTML = err.name;
+			}
+		}
+	</script>
+</body>
+</html>
